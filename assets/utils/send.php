@@ -62,5 +62,6 @@
 	}
 
 	print_r((is_string($info))? $info: json_encode($info));
+	// Toda vez que executa esse commando o vscode exclui o arquivo e imprede de criá-lo novamente
 	//echo sendData('localhost:8000/assets/utils/infos.php', (is_string($info))? $info: json_encode($info));
 ?>
