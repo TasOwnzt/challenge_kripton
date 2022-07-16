@@ -1,0 +1,7 @@
+/vendor/
+/.vscode/
+
+backup*
+**/*backup*
+
+composer.lock

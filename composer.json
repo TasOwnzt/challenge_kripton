@@ -1,0 +1,26 @@
+{
+    "name": "challenge/krypton",
+    "description": "",
+    "version": "0.1.0-apha",
+    "type": "project",
+    "homepage": "https://github.com/TasOwnzt/challenge_krypton",
+    "authors": [
+        {
+            "name": "Tas Ownzt",
+            "email": "email@anything.com"
+        }
+    ],
+    "autoload": {
+        "psr-4": { "Monolog\\": ["api/*", "assets/*"] },
+        "classmap" : ["api/*", "assets/*"]
+    },
+    "require": {
+        "php" : ">=7.4",
+        "slim/slim": "^4.10",
+        "slim/psr7": "^1.5",
+        "nyholm/psr7": "^1.5",
+        "nyholm/psr7-server": "^1.0",
+        "guzzlehttp/psr7": "^2",
+        "laminas/laminas-diactoros": "^2.13"
+    }
+}
