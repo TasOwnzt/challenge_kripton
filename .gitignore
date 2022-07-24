@@ -2,6 +2,6 @@
 /.vscode/
 
 backup*
-**/*backup*
+/**/*backup*
 
-composer.lock
+*.lock

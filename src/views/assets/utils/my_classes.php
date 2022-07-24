@@ -1,29 +1,5 @@
 <?php
 
-// function sendData($url, $data){
-// 	$start = curl_init($url);
-
-// 	curl_setopt($start, CURLOPT_CUSTOMREQUEST, 'POST');
-// 	//curl_setopt($start, CURLOPT_POST, true);
-// 	// curl_setopt($start, CURLOPT_POSTFIELDS, is_string($data)? $data: json_encode($data));
-// 	curl_setopt($start, CURLOPT_POSTFIELDS, $data);
-// 	curl_setopt($start, CURLOPT_RETURNTRANSFER, true);
-// 	/* curl_setopt($start, CURLOPT_HTTPHEADER, [
-// 		'Content-Type: application/json'
-// 	]); */
-
-// 	$response = curl_exec($start);
-
-// 	curl_close($start);
-
-// 	/* if (curl_errno($start)) {
-// 		echo 'Error:' . curl_error($start);
-// 	} */
-
-// 	return $response;
-// }
-
-
 function getExternalData(string $url= "https://apiintranet.kryptonbpo.com.br/test-dev/exercise-1"){
 	$result = json_decode(file_get_contents($url), true);
 
@@ -54,7 +30,7 @@ $cars = getVehicles($data);
 $motors = getMotors($data);
 
 function addButtonView($id):string{
-	return '<button data-motor-id="' . $id . '" onclick="showModalMotor(event)"><img src="/assets/icons/eye.png"\
+	return '<button data-motor-id="' . $id . '" onclick="showModalMotor(event)"><img src="' . join('/', [ASSETSDIR, 'icons', 'eye.png']) . '"
 			 alt="Visualizar Motor" title="Visualizar Motor" ></button>';
 }
 
